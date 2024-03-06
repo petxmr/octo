@@ -57,7 +57,7 @@ class Expression(Node):
     right: Any = None
 
     def evaluate(self, environment):
-        if self.op in ['+', '-', '*', '/']:
+        if self.op in ['+', '-', '*', '/', '%']:
             left_value = self.left.evaluate(environment) if self.left else 0
             right_value = self.right.evaluate(environment) if self.right else 0
 
@@ -67,6 +67,8 @@ class Expression(Node):
                 return left_value - right_value
             elif self.op == '*':
                 return left_value * right_value
+            elif self.op == '%':
+                return left_value % right_value
             elif self.op == '/':
                 if right_value == 0:
                     raise ZeroDivisionError("Division by zero")
