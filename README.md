@@ -1,5 +1,5 @@
 # octo
-Octo is a extremely basic interpreter for simple calculations and small amounts of scripting. Made for learning purposes.
+Octo is an extremely basic interpreter for simple calculations and small amounts of scripting. Made for learning purposes.
 
 # usage
 1. download `main.py` or clone the repository
